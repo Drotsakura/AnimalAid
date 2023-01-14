@@ -1,0 +1,127 @@
+.content_center {
+    width: 1200px;
+    height: 650px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.content_center .center_left {
+    float: left;
+    background-color: white;
+    width: 340px;
+    height: 650px;
+}
+
+.content_center .center_right {
+    float: right;
+    background-color: white;
+    width: 840px;
+    height: 650px;
+}
+
+.center_left .user {
+    height: 300px;
+    width: 340px;
+    border-bottom: 5px solid  rgba(221, 221, 221, 0.533);
+}
+
+.center_left .user span {
+    display: block;
+    font-size: 20px;
+    height: 132px;
+    text-align: center;
+    line-height: 100px;
+}
+
+.center_left img {
+    display: inline-block;
+    height: 128px;
+    width: 128px;
+    margin: 40px 0px 0px 106px;
+}
+
+
+.powerlist li{
+    float: left;
+}
+
+.powerlist li div {
+    height: 70px;
+    width: 340px;
+    text-align: center;
+    line-height: 70px;
+    font-size: 22px;
+    border-bottom: 1px solid rgba(221, 221, 221, 0.533);
+    color: black;
+}
+
+.powerlist li div:hover {
+    background-color: rgba(221, 221, 221, 0.533);
+}
+
+.center_right .center_title {
+    height: 80px;
+    width: 840px;
+    line-height: 80px;
+    padding-left: 40px;
+    font-size: 20px;
+    border-bottom: 2px solid rgba(221, 221, 221, 0.533);
+}
+
+.basics , .password , .feedback{
+    width: 840px;
+    height: 570px;
+}
+
+.basics div , .password div , .feedback div{
+    margin-top: 30px;
+    margin-left: 40px;
+}
+
+.basics span , .password span {
+    display: inline-block;
+    height: 60px;
+    width: 100px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.basics div input , .password div input{
+    height: 60px;
+    width: 600px;
+    font-size: 16px;
+    border: 2px solid rgba(221, 221, 221, 0.533);
+    outline: none;
+}
+
+.basics input::placeholder{
+    padding-left: 20px;
+}
+
+.password input::placeholder{
+    padding-left: 20px;
+}
+
+.basics .basicsave , .password .wordsave , .feedback .feedsave{
+    height: 40px;
+    width: 120px;
+    margin-left: 40px;
+    margin-top: 40px;
+    border: 2px solid rgba(221, 221, 221, 0.533);
+}
+
+.feedback textarea {
+    width: 600px;
+    height: 300px;
+    font-size: 16px;
+    border: 2px solid rgba(102, 102, 102, 0.6);
+    max-lines: 10;
+    resize: none;
+    outline: none;
+    padding: 10px;
+}
+
+.basics , .password , .feedback{
+    display: none;
+}

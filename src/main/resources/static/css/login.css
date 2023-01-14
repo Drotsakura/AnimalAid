@@ -1,0 +1,135 @@
+.login {
+    height: 600px;
+    width: 900px;
+    background-color: white;
+    margin: auto;
+    margin-top: 300px;
+    box-shadow: 2px 2px rgba(221, 221, 221, 0.533);
+    border-radius: 20px;
+}
+
+.login_menu {
+    padding: 10px;
+    width: 900px;
+    height: 80px;
+    background-color: #fff;
+    text-align: center;
+    border-bottom: 2px solid rgba(221, 221, 221, 0.533);
+    border-radius: 20px 20px 0 0;
+}
+
+.menu_enter {
+    float: left;
+    height: 60px;
+    width: 140px;
+    line-height: 60px;
+    font-size: 20px;
+    background-color: #99CCFF;
+    border-radius: 20px;
+    box-shadow: 2px 2px rgba(221, 221, 221, 0.533);
+}
+
+.menu_enter:hover {
+    color: white;
+}
+
+.menu_register {
+    float: left;
+    margin-left: 10px;
+    height: 60px;
+    width: 140px;
+    line-height: 60px;
+    font-size: 20px;
+    background-color: #CCCCFF;
+    border-radius: 20px;
+    box-shadow: 2px 2px rgba(221, 221, 221, 0.533);
+}
+
+.menu_register:hover {
+    color: white;
+}
+
+.login_content {
+    height: 520px;
+    width: 900px;
+}
+
+.content_enter{
+    position: relative;
+    height: 520px;
+    width: 900px;
+    background-color: #99CCFF;
+    border-radius: 0 0 20px 20px;
+}
+
+.content_register {
+    position: relative;
+    height: 520px;
+    width: 900px;
+    background-color: #CCCCFF;
+    border-radius: 0 0 20px 20px;
+}
+
+
+.lable span{
+    height: 40px;
+    width: 80px;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    background-color: #fff;
+    margin-right: 10px;
+    box-shadow: 2px 2px rgba(221, 221, 221, 0.533);
+    border-radius: 10px;
+}
+
+.lable input {
+    height: 40px;
+    width: 250px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    box-shadow: 2px 2px rgba(221, 221, 221, 0.533);
+    border-radius: 10px;
+}
+
+.btn_login, .btn_register{
+    height: 40px;
+    width: 150px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    box-shadow: 2px 2px rgba(221, 221, 221, 0.533);
+    border-radius: 10px;
+}
+
+.lable_account {
+    position: absolute;
+    top: 100px;
+    left: 30%;
+}
+
+.lable_password {
+    position: absolute;
+    top: 160px;
+    left: 30%;
+}
+
+.lable_password1 {
+    position: absolute;
+    top: 220px;
+    left: 30%;
+}
+
+.btn_login , .btn_register{
+    position: absolute;
+    top: 280px;
+    left: 42%;
+}
+
+.content_register {
+    display: none;
+}

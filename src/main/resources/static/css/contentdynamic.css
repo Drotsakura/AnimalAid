@@ -1,0 +1,75 @@
+body {
+    background-color: rgba(221, 221, 221, 0.533);
+}
+
+.content_dynamic {
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+.content {
+    width: 1000px;
+    border-radius: 10px;
+}
+
+.content ul li {
+    float: left;
+    background-color: white;
+}
+
+.content ul li:hover {
+    background-color: rgba(221, 221, 221, 0.533);
+}
+
+.content ul li a {
+    display: inline-block;
+    height: 245px;
+    width: 1000px;
+    border-radius: 10px;
+}
+
+.content ul li div {
+    float: left;
+    height: 245px;
+    text-align: center;
+    color: black;
+}
+
+.content .content_img {
+    width: 350px;
+}
+
+.content ul li img {
+    display: block;
+    margin: auto;
+    margin-top: 17.5px;
+}
+
+.content .content_rich {
+    width: 630px;
+    margin-right: 20px;
+}
+
+.content .content_rich span {
+    display: block;
+    width: 630px;
+}
+
+.content .content_rich .data1 {
+    height: 60px;
+    line-height: 60px;
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.content .content_rich .data2 {
+    height: 120px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.content .content_rich .data3 {
+    text-align: right;
+}

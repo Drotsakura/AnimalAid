@@ -1,0 +1,144 @@
+.show {
+    width: 1000px;
+    height: 250px;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.banner {
+    position: relative;
+    height: 250px;
+    width: 500px;
+    float: left;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 2px 2px rgba(221, 221, 221, 0.533);
+}
+
+.banner ul li {
+    float: left;
+}
+
+.banner ul li span {
+    display: inline-block;
+    width: 500px;
+    height: 250px;
+}
+
+.banner ul{
+    position: absolute;
+    width: 500%;
+    height: 300px;
+}
+
+.banner ol {
+    position: absolute;
+    top: 75%;
+    left: 45%;
+    list-style: none;
+}
+
+.banner ol li {
+    float: left;
+    width: 8px;
+    height: 8px;
+    border: 4px solid rgba(255, 255, 255, 0.4);
+    margin: 0 3px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.notice {
+    float: left;
+    margin-left: 15px;
+    height: 250px;
+    width: 485px;
+}
+
+.system_notice {
+    width: 485px;
+    height: 45px;
+    box-shadow: 2px 2px rgba(221, 221, 221, 0.533);
+    margin-bottom: 5px;
+    border-radius: 5px;
+    line-height: 45px;
+    background-color: #fff;
+}
+
+.system_notice img {
+    margin-left: 20px;
+    float: left;
+    width: 45px;
+    height: 45px;
+}
+
+.system_notice span {
+    margin-left: 10px;
+    float: left;
+    height: 45px;
+    line-height: 45px;
+}
+
+.poster {
+    position: relative;
+    width: 485px;
+    height: 120px;
+    background-color: pink;
+    margin-bottom: 5px;
+    box-shadow: 2px 2px rgba(221, 221, 221, 0.533);
+    border-radius: 5px;
+}
+
+.poster img{
+    width: 50px;
+    height: 50px;
+    margin-top: 35px;
+}
+
+.poster .poster1{
+    float: left;
+    margin-left: 30px;
+}
+
+.poster .poster2{
+    float: right;
+    margin-right: 30px;
+}
+
+.poster span {
+    font-size: 20px;
+    position: absolute;
+    left: 40%;
+    top: 40%;
+}
+
+.notice_menu {
+    width: 485px;
+    height: 75px;
+    box-shadow: 2px 2px rgba(221, 221, 221, 0.533);
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.notice_menu ul li {
+    float: left;
+    margin-left: 29.5px;
+    height: 75px;
+    background-color: #fff;
+}
+
+.notice_menu ul li a img {
+    display: block;
+    width: 38px;
+    height: 38px;
+    margin-left: 5px;
+    margin-top: 8px;
+}
+
+.notice_menu ul li a span{
+    display: block;
+    color: black;
+    font-size: 12px;
+}
+

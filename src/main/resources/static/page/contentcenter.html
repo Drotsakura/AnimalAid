@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimalAid-动物援助</title>
+
+    <link rel="shortcut icon" href="../cat.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/generalpage.css">
+    <link rel="stylesheet" href="../css/contentcenter.css">
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/generalmenu.js"></script>
+    <script src="../js/cententcenter.js"></script>
+    
+</head>
+<body>
+    <div class="head">
+        <div class="head_menu">
+            <h1> <img src="../image/logo.png" alt=" "> <span>AnimalAid</span> </h1>
+            <div class="nowpage">个人信息</div>
+            <div class="head_change">
+                <span class="user"><img src="../image/system_notice.png"></span>
+                <span class="username">admin</span><span class="down"><img src="../image/dwon.png"></span>
+                <ul>
+                   <li><a href="#"><div>个人中心</div></a></li>
+                   <li><a href="#"><div>我的动态</div></a></li>
+                   <li><a href="#"><div>聊天信息</div></a></li>
+                   <li><a href="#"><div>爱心医生</div></a></li>
+                   <li><a href="#"><div>系统管理</div></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="content_center">
+        <div class="center_left">
+            <div class="user">
+                <img src="../image/headpicture.png" alt="">
+                <span class="username">admin</span>
+            </div>
+            <div class="powerlist">
+                <ul>
+                    <li><a href="javascript:;"><div>基本资料</div></a></li>
+                    <li><a href="javascript:;"><div>修改密码</div></a></li>
+                    <li><a href="javascript:;"><div>用户反馈</div></a></li>
+                    <li><a class="logout" href="javascript:;"><div>退出登录</div></a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="center_right">
+            <div class="center_title">无选择</div>
+            <div class="basics">
+                <div><span>名称</span> <input class="newName" type="text" placeholder="最长不超过6个字符"></div>
+                <div><span>地址</span> <input class="newAddress" type="text" placeholder="xx省/xx市/xx县"></div>
+                <div><span>电子邮箱</span> <input class="newEmail" type="email"></div>
+
+                <input class="basicsave" type="button" value="保存设置">
+            </div>
+
+            <div class="password">
+                <div><span>新密码</span> <input  class="newPassword" type="password" placeholder="密码长度大于6包括数字英文"></div>
+                <div><span>再次确认</span> <input class="newPassword2" type="password" placeholder="再次输入密码"></div>
+
+                <input class="wordsave" type="button" value="保存设置">
+            </div>
+
+            <div class="feedback">
+                <div><textarea name="" id="" cols="10" rows="10" maxlength="50"></textarea></div>
+                <input class="feedsave" type="button" value="提交反馈">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <iframe  width="1000px" height="300px" src="footer.html" frameborder="0"  marginwidth="0" marginheight="0" scrolling="no"></iframe>
+    </div>
+</body>
+</html>

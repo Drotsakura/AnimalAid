@@ -1,0 +1,58 @@
+.footer {
+    margin-top: 190px;
+}
+
+.content_regulator {
+    width: 1000px;
+    height: 730px;
+    margin:  0 auto;
+    margin-top: 50px;
+}
+
+.content_regulator .center_left {
+    float: left;
+    background-color: white;
+    width: 250px;
+    height: 730px;
+}
+
+.powerlist li{
+    float: left;
+}
+
+.powerlist li div {
+    height: 70px;
+    width: 250px;
+    text-align: center;
+    line-height: 70px;
+    font-size: 22px;
+    border-bottom: 1px solid rgba(221, 221, 221, 0.533);
+    color: black;
+}
+
+.powerlist li div:hover {
+    background-color: rgba(221, 221, 221, 0.533);
+}
+
+.content_regulator .center_right {
+    float: right;
+    background-color: white;
+    width: 730px;
+    height: 730px;
+    margin-left: 20px;
+}
+
+.center_right .center_title {
+    height: 70px;
+    width: 730px;
+    line-height: 80px;
+    padding-left: 40px;
+    font-size: 20px;
+    border-bottom: 2px solid rgba(221, 221, 221, 0.533);
+}
+
+.center_notice {
+    width: 730px;
+    height: 660px;
+    background-color: pink;
+}

@@ -1,0 +1,28 @@
+.footer {
+    position: relative;
+    height: 300px;
+    background-color: #24252A;
+    margin: auto;
+}
+
+.forweb {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    color: aliceblue;
+}
+
+.content {
+    position: absolute;
+    top: 32%;
+    left: 25%;
+    color: #7E8B92;
+}
+
+.tip {
+    position: absolute;
+    top: 39%;
+    left: 25%;
+    color: #7E8B92;
+}
+

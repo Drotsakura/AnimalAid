@@ -1,0 +1,98 @@
+.footer {
+    margin-top: 40px;
+}
+
+.content_doctor {
+    width: 1000px;
+    margin: 0 auto;
+    box-shadow: 2px 2px rgba(221, 221, 221, 0.533);
+}
+
+.docter_gpt {
+    margin-top: 20px;
+    height: 200px;
+    width: 1000px;
+    background-color: white;
+}
+
+.docter_gpt .gpt_img {
+    float: left;
+}
+
+.docter_gpt .gpt_img img {   
+    display: inline-block;
+    height: 128px;
+    width: 128px;
+    margin-top: 36px;
+    margin-left: 220px;
+}
+
+.docter_gpt .gpt_answer {
+    float: right;
+    height: 150px;
+    width: 400px;
+    margin-top: 25px;
+    margin-right: 220px;
+    background-color: rgba(221, 221, 221, 0.533);
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: normal;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.question {
+    height: 140px;
+    width: 1000px;
+    background-color: white;
+    border-bottom: 1px solid rgba(199, 199, 199, 0.7);
+}
+
+.question textarea {
+    width: 350px;
+    height: 139px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    resize: none;
+    margin-left: 325px;
+}
+
+.docter_person {
+    background-color: #fff;
+    padding: 20px 60px 0 60px;
+    height: 560px;
+    width: 1000px;
+    overflow-y: auto;
+}
+
+.docter_person li {
+    float: left;
+    height: 160px;
+    width: 200px;
+    background-color: pink;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.docter_person img {
+    height: 90px;
+    width: 90px;
+    margin-left: 55px;
+}
+
+.docter_person div {
+    height: 30px;
+    width: 120px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    margin-left: 40px;
+}
+
+.docter_person input {
+    height: 30px;
+    width: 100px;
+    margin-left: 50px;
+    border: none;
+}

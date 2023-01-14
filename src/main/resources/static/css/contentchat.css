@@ -1,0 +1,138 @@
+.footer{
+    margin-top: 169px;
+}
+
+.content_chat {
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.content_chat .centet_left {
+    float: left;
+    height: 750px;
+    width: 300px;
+    overflow-y: auto;
+    background-color: #fff;
+    box-shadow: 2px 2px rgba(221, 221, 221, 0.533);
+}
+
+.content_left ul li {
+    float: left;
+}
+
+.centet_left ul li a {
+    display: block;
+    position: relative;
+    height: 80px;
+    width: 300px;
+    background-color: white;
+}
+
+.centet_left ul li a:hover{
+    background-color:  rgba(221, 221, 221, 0.533);;
+}
+
+.centet_left li img {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    margin-top: 15px;
+    margin-left: 24px;
+}
+
+.centet_left li span {
+    position: absolute;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 15px;
+    left: 30%;
+    color: black;
+}
+
+.content_chat .centet_right {
+    float: left;
+    height: 750px;
+    width: 680px;
+    margin-left: 20px;
+    background-color: white;
+    box-shadow: 2px 2px rgba(221, 221, 221, 0.533);
+}
+
+.centet_right .left_head {
+    width: 680px;
+    height: 80px;
+    position: relative;
+    border-bottom: 1px solid rgba(199, 199, 199, 0.7);
+}
+
+.left_head .labble1 {
+    position: absolute;
+    top: 60%;
+    left: 20px;
+}
+
+.left_head .labble2 {
+    position: absolute;
+    left: 20px;
+    top: 20%;
+}
+
+.left_head .labble3 {
+    position: absolute;
+    right: 20px;
+    top: 20%;
+}
+
+.centet_right .left_middle {
+    width: 680px;
+    height: 470px;
+    border-bottom: 1px solid rgba(199, 199, 199, 0.7);
+    overflow-y: auto;
+}
+
+.left_middle li {
+    float: left;
+}
+
+.left_middle li div {
+    position: relative;
+    height: 50px;
+    width: 650px;
+    line-height: 50px;
+}
+
+.left_middle .middle_left {
+    position: absolute;
+    left: 40px;
+}
+
+.left_middle .middle_right {
+    position: absolute;
+    right: 20px;
+}
+
+.centet_right .left_last {
+    position: relative;
+    width: 680px;
+    height: 200px;
+}
+
+.left_last textarea {
+    width: 680px;
+    height: 160px;
+    padding: 20px;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.left_last input {
+    position: absolute;
+    width: 98px;
+    height: 38px;
+    right: 2px;
+    bottom: 2px;
+    border: 2px solid rgba(221, 221, 221, 0.533);
+}
+
