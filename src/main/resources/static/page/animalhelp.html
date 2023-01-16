@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/animal.css">
+    <link rel="stylesheet" href="../css/dynamicadd.css">
 
     <script src="../js/jquery.js"></script>
     <script src="../js/animalhelp.js"></script>
+    <script src="../js/animal.js"></script>
 </head>
 <body>
     <div class="head">
@@ -20,7 +22,7 @@
             <h1> <img src="../image/logo.png" alt=" "> <span>AnimalAid</span> </h1>
 
             <div class="search">
-                <input type="text" name="" id="" placeholder="搜一搜">
+                <input type="text" name="" id="search-input" placeholder="搜一搜">
                 <span> <img src="../image/search.png"></span>
             </div>
 
@@ -31,8 +33,43 @@
                     <li><span><img src="../image/user.png"></span><a href="#">用户</a></li>
                 </ul>
             </div>
-
         </div>
+
+        <div class="new_dynamic">
+
+            <div class="content_menu">
+                <div class="cover_left">
+                    <div class="show_img">
+                        封面
+                    </div>
+                    <input class="img_tip" id="chooseImage" type="file" name="file">
+                </div>
+
+                <div class="cover_right">
+                    <div><input type="text" placeholder="请输入文章标题（4-10个字）"></div>
+                    <div class="animal_select">
+                        <span>动物种类:</span>
+                        <select name="条件选择" id="condition_select">
+                            <option value="username">边牧</option>
+                            <option value="eamil">波斯猫</option>
+                            <option value="userid">白狐</option>
+                        </select>
+                        <span class="trait">动物特征:</span>
+                    </div>
+
+                    <div class="condition_content">
+                        <textarea name="" id="textarea1" cols="30" rows="10" placeholder="格式如：身体=黑白点 多个特征用-分割"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content_detail">
+                <textarea name="" id="textarea2" cols="30" rows="10"></textarea>
+                <input type="button" value="发布">
+                <input class="btn_cancel" type="button" value="取消">
+            </div>
+        </div>
+
     </div>
 
 
@@ -41,60 +78,16 @@
             <div class="title"><span class="title_left">走失求助：</span></div>
             <div class="title_content">
                 <ul>
-                    <li>
-                        <a href="#">
-                            <div class="content_img"><img src="../image/cat.png" alt="#"></div>
-                            <div class="content_rich">
-                                <span class="data1">宠物狗走失</span>
-                                <span class="data2">我家狗狗昨天晚上和我出去玩，然后和我走散了，找了有半个小时，在润达超市附近</span>
-                                <span class="data3">2023/1/2</span>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            <div class="content_img"><img src="../image/cat.png" alt="#"></div>
-                            <div class="content_rich">
-                                <span class="data1">宠物狗走失</span>
-                                <span class="data2">我家狗狗昨天晚上和我出去玩，然后和我走散了，找了有半个小时，在润达超市附近</span>
-                                <span class="data3">2023/1/2</span>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            <div class="content_img"><img src="../image/cat.png" alt="#"></div>
-                            <div class="content_rich">
-                                <span class="data1">宠物狗走失</span>
-                                <span class="data2">我家狗狗昨天晚上和我出去玩，然后和我走散了，找了有半个小时，在润达超市附近</span>
-                                <span class="data3">2023/1/2</span>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            <div class="content_img"><img src="../image/cat.png" alt="#"></div>
-                            <div class="content_rich">
-                                <span class="data1">宠物狗走失</span>
-                                <span class="data2">我家狗狗昨天晚上和我出去玩，然后和我走散了，找了有半个小时，在润达超市附近</span>
-                                <span class="data3">2023/1/2</span>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
-                            <div class="content_img"><img src="../image/cat.png" alt="#"></div>
-                            <div class="content_rich">
-                                <span class="data1">宠物狗走失</span>
-                                <span class="data2">我家狗狗昨天晚上和我出去玩，然后和我走散了，找了有半个小时，在润达超市附近</span>
-                                <span class="data3">2023/1/2</span>
-                            </div>
-                        </a>
-                    </li>
+                       <!-- <li>
+                            <a href="#" dynamicid="#">
+                                <div class="content_img"><img src="../image/cat.png" alt="#"></div>
+                                <div class="content_rich">
+                                    <span class="data1">宠物狗走失</span>
+                                    <span class="data2">我家狗狗昨天晚上和我出去玩，然后和我走散了，找了有半个小时，在润达超市附近</span>
+                                    <span class="data3">2023/1/2</span>
+                                </div>
+                            </a>
+                        </li>-->
                 </ul>
             </div>
         </div>
@@ -103,7 +96,5 @@
             <img src="../image/addnew.png" alt="">
         </div>
     </div>
-
-   
 </body>
 </html>
