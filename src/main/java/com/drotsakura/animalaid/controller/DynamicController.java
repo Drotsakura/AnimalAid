@@ -22,9 +22,6 @@ public class DynamicController {
     @Resource
     private DynamicService dynamicService;
 
-    @Resource
-    private ImageService imageService;
-
     @PostMapping("/save")
     public Result save(@RequestBody Dynamic dynamic){
 
@@ -33,19 +30,32 @@ public class DynamicController {
 
     @GetMapping("/select")
     public Result allDynamic(){
-        LambdaQueryWrapper<Dynamic> queryWrapper = new LambdaQueryWrapper<>();
-        queryWrapper.eq(Dynamic::getUserid, BaseContext.getId());
-        List<Dynamic> list = dynamicService.list(queryWrapper);
-
-        List<DynamicDto> dynamicDtoList = list.stream().map(item -> {
-            Long imageId = item.getImageId();
-            Image image = imageService.getById(imageId);
-            DynamicDto dynamicDto = new DynamicDto();
-            BeanUtils.copyProperties(item, dynamicDto);
-            dynamicDto.setNativeUrl(image.getNativeUrl());
-            return dynamicDto;
-        }).toList();
-
-        return Result.ok(dynamicDtoList);
+        return dynamicService.queryAllDynamic();
     }
+
+    @GetMapping("/animal_help")
+    public Result selectDynamicHelp(){
+        return dynamicService.queryByType(0);
+    }
+
+    @GetMapping("/animal_register")
+    public Result selectDynamicRegister(){
+        return dynamicService.queryByType(1);
+    }
+
+    @GetMapping("/animal_change")
+    public Result selectDynamicChange(){
+        return dynamicService.queryByType(2);
+    }
+
+    @GetMapping("/animal_knowledge")
+    public Result selectDynamicKnowledge(){
+        return dynamicService.queryByType(3);
+    }
+
+    @GetMapping("/animal_mate")
+    public Result selectDynamicMate(){
+        return dynamicService.queryByType(4);
+    }
+
 }

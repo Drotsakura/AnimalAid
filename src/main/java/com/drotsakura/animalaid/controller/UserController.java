@@ -18,32 +18,18 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/login")
-    public Result login(@RequestBody User user,HttpSession HttpSession){
-        LambdaQueryWrapper<User> queryWrapper = new LambdaQueryWrapper<>();
-        queryWrapper.eq(User::getEmail,user.getEmail())
-                    .eq(User::getPassword,user.getPassword());
-        User one = userService.getOne(queryWrapper);
-
-        if (one == null) return Result.fail("用户不存在");
-        HttpSession.setAttribute("userid",one.getId());
-        return  Result.ok(one);
+    public Result login(@RequestBody User user,HttpSession httpSession){
+      return userService.queryByEmailAndPassword(user,httpSession);
     }
 
     @PostMapping("/update")
     public Result update(@RequestBody User user){
-        LambdaUpdateWrapper<User> updateWrapper = new LambdaUpdateWrapper<>();
-        if ( BaseContext.getId().equals(user.getId())){
-            updateWrapper.eq(User::getId,user.getId())
-                    .set(!StringUtils.isEmpty(user.getUsername()),User::getUsername,user.getUsername())
-                    .set(!StringUtils.isEmpty(user.getPassword()),User::getPassword,user.getPassword())
-                    .set(!StringUtils.isEmpty(user.getEmail()),User::getEmail,user.getEmail())
-                    .set(!StringUtils.isEmpty(user.getAddress()),User::getAddress,user.getAddress());
-            userService.update(updateWrapper);
-        }else {
-            return Result.fail("更新失败");
-        }
+       return userService.updateForUser(user);
+    }
 
-        return Result.ok("更新成功");
+    @GetMapping("/doctor")
+    public Result selectDoctor(){
+       return userService.queryAllDoctors();
     }
 
 }
