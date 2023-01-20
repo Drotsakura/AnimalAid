@@ -1,8 +1,7 @@
 package com.drotsakura.animalaid.controller;
 
 import com.drotsakura.animalaid.common.Result;
-import com.drotsakura.animalaid.common.SystemConstants;
-import org.springframework.util.StringUtils;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -12,14 +11,17 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/upload")
 public class UploadController {
+    @Value("${animal_aid.path}")
+    private String imgPath;
 
     @PostMapping("/save")
     public Result uploadImage(@RequestParam("file") MultipartFile image){
+        System.out.println("文件处理");
         String fileName = null;
         try {
             String originalFilename = image.getOriginalFilename();
             fileName = createNewFileName(originalFilename);
-            image.transferTo(new File(SystemConstants.IMAGE_PATH,fileName));
+            image.transferTo(new File(imgPath,fileName));
         }catch (Exception e){
             e.printStackTrace();
         }

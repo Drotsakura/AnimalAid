@@ -32,4 +32,9 @@ public class UserController {
        return userService.queryAllDoctors();
     }
 
+    @PostMapping("/register")
+    public Result register(@RequestBody User user){
+        return userService.registerByEmail(user);
+    }
+
 }

@@ -1,0 +1,165 @@
+.north{
+    width: 900px;
+    margin: auto;
+    margin-top: 40px;
+    box-shadow: 2px 2px 2px 2px rgba(221, 221, 221, 0.533);
+}
+
+.user_head {
+    width: 900px;
+    height: 100px;
+    background-color: #fff;
+    line-height: 100px;
+    border-bottom: 2px solid  rgba(221, 221, 221, 0.533);
+}
+
+.user_head img{
+   float: left;
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.user_head span {
+    float: left;
+    font-size: 20px;
+    line-height: 100px;
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+}
+
+.user_head div {
+    font-size: 30px;
+    margin-left: 385px;
+}
+
+.dynamic_head {
+    width: 900px;
+    height: 310px;
+}
+
+.dynamic_head .head1 {
+    width: 900px;
+    height: 60px;
+    font-size: 25px;
+    text-align: center;
+    line-height: 60px;
+    background-color: #fff;
+}
+
+.dynamic_head .head2_left {
+    float: left;
+    width: 400px;
+    height: 250px;
+    background-color: #fff;
+    padding: 20px 45px;
+}
+
+.head2_left img {
+    box-shadow: 2px 2px 2px 2px rgba(221, 221, 221, 0.533);
+}
+
+.dynamic_head .head2_right {
+    float: right;
+    width: 500px;
+    height: 250px;
+    background-color: #fff;
+    padding: 20px 45px;
+}
+
+.dynamic_content {
+    width: 900px;
+    height: 300px;
+    padding: 30px;
+    background-color: #fff;
+    border-top: 2px solid  rgba(221, 221, 221, 0.533);
+}
+
+.center {
+    width: 900px;
+    height: 100px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px 2px rgba(221, 221, 221, 0.533);
+}
+
+.center img {
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 90px;
+}
+
+.center .data_comment {
+    float: left;
+    height: 40px;
+    width: 500px;
+    margin: 30px 20px;
+}
+
+.center .btn_comment {
+    float: left;
+    height: 40px;
+    width: 100px;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+.south {
+    width: 900px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: white;
+    box-shadow: 2px 2px 2px 2px rgba(221, 221, 221, 0.533);
+    padding-bottom: 80px;
+}
+
+.south li {
+    float: left;
+    width: 850px;
+    height: 80px;
+    background-color: #fff;
+    padding: 10px 0px;
+    margin-left: 25px;
+    border-bottom: 2px solid  rgba(100, 100, 100, 0.533);
+}
+
+.south li img {
+    float: left;
+    width: 60px;
+    height: 60px;
+}
+
+.south .comment_left {
+    float: left;
+}
+
+.comment_left div {
+    height: 30px;
+    width: 80px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.south .comment_right {
+    float: right;
+}
+
+.comment_right div {
+    height: 30px;
+    width: 80px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.south .comment_center {
+    width: 610px;
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    padding: 0px 30px;
+}

@@ -11,4 +11,6 @@ public interface UserService extends IService<User> {
     public Result updateForUser(User user);
 
     public Result queryAllDoctors();
+
+    public Result registerByEmail(User user);
 }

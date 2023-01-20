@@ -24,8 +24,8 @@ public class DynamicController {
 
     @PostMapping("/save")
     public Result save(@RequestBody Dynamic dynamic){
-
-        return Result.ok("动态添加成功");
+        System.out.println(dynamic);
+        return dynamicService.saveDynamic(dynamic);
     }
 
     @GetMapping("/select")

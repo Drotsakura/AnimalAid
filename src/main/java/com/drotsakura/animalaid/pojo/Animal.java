@@ -12,5 +12,5 @@ import java.io.Serializable;
 @TableName("tb_animal")
 public class Animal implements Serializable {
     private Long id;
-    private Integer type;
+    private String type;
 }

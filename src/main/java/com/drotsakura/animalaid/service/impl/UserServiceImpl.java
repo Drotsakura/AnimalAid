@@ -9,6 +9,7 @@ import com.drotsakura.animalaid.mapper.UserMapper;
 import com.drotsakura.animalaid.pojo.SafeUser;
 import com.drotsakura.animalaid.pojo.User;
 import com.drotsakura.animalaid.service.UserService;
+import com.drotsakura.animalaid.utils.RandomUsername;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -59,5 +60,24 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements Use
         }).toList();
 
         return Result.ok(listDoctors);
+    }
+
+    @Override
+    public Result registerByEmail(User user) {
+        LambdaQueryWrapper<User> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(User::getEmail,user.getEmail());
+        User one = this.getOne(queryWrapper);
+
+        if (one != null){
+            return Result.fail("邮箱已注册,不能重复注册");
+        }
+
+        user.setUsername(RandomUsername.getSixBitUsername());
+        user.setGrade(0);
+        user.setType(0);
+        user.setImageId(1L);
+        this.save(user);
+
+        return Result.ok("账号注册成功");
     }
 }

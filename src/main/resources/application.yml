@@ -18,5 +18,8 @@ mybatis-plus:
     db-config:
       id-type: ASSIGN_ID
 
+animal_aid:
+  path: F:\uploads\
+
 
 

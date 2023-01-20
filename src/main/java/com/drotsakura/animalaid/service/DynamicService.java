@@ -8,4 +8,6 @@ public interface DynamicService extends IService<Dynamic> {
     public Result queryAllDynamic();
 
     public Result queryByType(Integer type);
+
+    public Result saveDynamic(Dynamic dynamic);
 }

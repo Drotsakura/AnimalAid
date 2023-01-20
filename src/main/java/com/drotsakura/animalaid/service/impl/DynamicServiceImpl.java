@@ -52,4 +52,15 @@ public class DynamicServiceImpl extends ServiceImpl<DynamicMapper, Dynamic> impl
 
         return Result.ok(dynamicDtoList);
     }
+
+    @Override
+    public Result saveDynamic(Dynamic dynamic) {
+        dynamic.setUserid(BaseContext.getId());
+        dynamic.setImageId(1L);
+
+        if (!this.save(dynamic)){
+            return Result.fail("保存失败");
+        }
+        return Result.ok("发布成功");
+    }
 }
