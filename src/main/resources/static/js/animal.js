@@ -1,8 +1,9 @@
 window.addEventListener('scroll',function(){
     var div  = this.document.querySelector('.sendnew');
     var offersetHeight = this.window.pageYOffset;
+    var newDynamic = this.document.querySelector(".new_dynamic")
 
-
+    newDynamic.style.top = 200 +offersetHeight + 'px';
     div.style.top = 2 + offersetHeight+'px';
     console.log(offersetHeight+"创建按钮固定"+div);
 
