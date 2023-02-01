@@ -14,6 +14,7 @@ import jakarta.annotation.Resource;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -54,13 +55,30 @@ public class DynamicServiceImpl extends ServiceImpl<DynamicMapper, Dynamic> impl
     }
 
     @Override
-    public Result saveDynamic(Dynamic dynamic) {
-        dynamic.setUserid(BaseContext.getId());
-        dynamic.setImageId(1L);
+    public Result saveDynamic(DynamicDto dynamicDto) {
+        Image image = new Image();
+        image.setNativeUrl(dynamicDto.getNativeUrl());
+        image.setType(0);
+        imageService.save(image);
 
-        if (!this.save(dynamic)){
+        dynamicDto.setUserid(BaseContext.getId());
+        dynamicDto.setImageId(image.getId());
+
+        if (!this.save(dynamicDto)){
             return Result.fail("保存失败");
         }
         return Result.ok("发布成功");
+    }
+
+    @Override
+    public Result getDynamic(Long dynamicId) {
+        Dynamic dynamic = this.getById(dynamicId);
+        Long imageId = dynamic.getImageId();
+        Image image = imageService.getById(imageId);
+        DynamicDto dynamicDto = new DynamicDto();
+        BeanUtils.copyProperties(dynamic, dynamicDto);
+        dynamicDto.setNativeUrl(image.getNativeUrl());
+
+        return Result.ok(dynamicDto);
     }
 }

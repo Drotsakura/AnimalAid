@@ -13,4 +13,6 @@ public interface UserService extends IService<User> {
     public Result queryAllDoctors();
 
     public Result registerByEmail(User user);
+
+    public Result getSafeUser();
 }

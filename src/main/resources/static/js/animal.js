@@ -19,8 +19,6 @@ window.addEventListener("load",function (){
     var textarea1 = this.document.querySelector("#textarea1");
     var textarea2 = this.document.querySelector("#textarea2");
 
-    var img_tip = this.document.querySelector(".img_tip");
-
     sendNew.addEventListener("click",function (){
         newDynamic.style.display = "block"
         getAnimalType(animal_type)
@@ -31,13 +29,16 @@ window.addEventListener("load",function (){
     })
 
     btn_issue.addEventListener("click",function () {
+        let show_img = document.querySelector(".show_img");
+
         let index = select.selectedIndex;
         let dynamic = {
             "title" : $(title).val(),
             "animalId" : select.options[index].value,
             "type" : 1,
             "feature" : $(textarea1).val(),
-            "content" : $(textarea2).val()
+            "content" : $(textarea2).val(),
+            "nativeUrl" : show_img.getAttribute("imgUrl")
         }
 
         saveDynamic(dynamic,newDynamic);
@@ -48,7 +49,7 @@ window.addEventListener("load",function (){
 function getDynamic(res,ul){
     if (res.isSucceed) {
         const listDynamicStrs = JSON.stringify(res.data);
-        let listDynamic = eval(listDynamicStrs);
+        const listDynamic = eval(listDynamicStrs);
 
         for (i=0;i<listDynamic.length;i++){
             let element = document.createElement("li");
@@ -61,8 +62,10 @@ function getDynamic(res,ul){
                 "                        </div>\n" +
                 "                    </a>"
 
+            let animalId = listDynamic[i].animalId;
             element.addEventListener("click",function (){
-                console.log(this)
+                window.localStorage.setItem('dynamicId',animalId);
+                window.open('../page/dynamicdetail.html','_blank');
             })
 
             ul.appendChild(element)
@@ -123,6 +126,7 @@ function fileUpload(){
             if (res.isSucceed){
                 console.log(show_img)
                 show_img.style.backgroundImage = "url(../../uploads/"+res.data+")"
+                show_img.setAttribute("imgUrl",res.data);
             }
         }
     })

@@ -37,4 +37,9 @@ public class UserController {
         return userService.registerByEmail(user);
     }
 
+    @GetMapping("/safeUser")
+    public Result safeUser(){
+        return userService.getSafeUser();
+    }
+
 }

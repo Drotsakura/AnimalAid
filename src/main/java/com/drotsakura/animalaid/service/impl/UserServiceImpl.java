@@ -80,4 +80,13 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements Use
 
         return Result.ok("账号注册成功");
     }
+
+    @Override
+    public Result getSafeUser() {
+        User user = this.getById(BaseContext.getId());
+        SafeUser safeUser = new SafeUser();
+        safeUser.setId(user.getId());
+        safeUser.setUsername(user.getUsername());
+        return Result.ok(safeUser);
+    }
 }

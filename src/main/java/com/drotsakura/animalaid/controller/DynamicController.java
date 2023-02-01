@@ -23,9 +23,8 @@ public class DynamicController {
     private DynamicService dynamicService;
 
     @PostMapping("/save")
-    public Result save(@RequestBody Dynamic dynamic){
-        System.out.println(dynamic);
-        return dynamicService.saveDynamic(dynamic);
+    public Result save(@RequestBody DynamicDto dynamicDto){
+        return dynamicService.saveDynamic(dynamicDto);
     }
 
     @GetMapping("/select")
@@ -57,5 +56,11 @@ public class DynamicController {
     public Result selectDynamicMate(){
         return dynamicService.queryByType(4);
     }
+
+    @GetMapping("/getDynamic")
+    public Result getDynamicById(Long dynamicId){
+        return dynamicService.getDynamic(dynamicId);
+    }
+
 
 }
