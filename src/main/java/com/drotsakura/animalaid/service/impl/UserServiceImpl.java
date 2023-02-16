@@ -89,4 +89,59 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements Use
         safeUser.setUsername(user.getUsername());
         return Result.ok(safeUser);
     }
+
+    @Override
+    public Result getSimpleUser(SafeUser safeUser) {
+        LambdaQueryWrapper<User> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(!StringUtils.isEmpty(safeUser.getId()),User::getId,safeUser.getId())
+                .eq(!StringUtils.isEmpty(safeUser.getUsername()),User::getUsername,safeUser.getUsername())
+                .eq(!StringUtils.isEmpty(safeUser.getEmail()),User::getEmail,safeUser.getEmail());
+        List<User> userList = this.list(queryWrapper);
+
+        List<SafeUser> safeUsers = userList.stream().map(item -> {
+            SafeUser newSafeUser = new SafeUser();
+            newSafeUser.setId(item.getId());
+            newSafeUser.setUsername(item.getUsername());
+            newSafeUser.setEmail(item.getEmail());
+            return newSafeUser;
+        }).toList();
+
+        return Result.ok(safeUsers);
+    }
+
+    @Override
+    public Result stopUserSay(Long id) {
+        LambdaUpdateWrapper<User> updateWrapper = new LambdaUpdateWrapper<>();
+        updateWrapper.eq(User::getId,id).set(User::getState,1);
+
+        if (this.update(updateWrapper)) {
+            return Result.ok("禁言成功");
+        }
+        return Result.fail("禁言失败");
+    }
+
+    @Override
+    public Result queryStopSayUser() {
+        LambdaQueryWrapper<User> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(User::getState,1);
+        List<SafeUser> safeUsers = this.list(queryWrapper).stream().map(item -> {
+            SafeUser safeUser = new SafeUser();
+            safeUser.setId(item.getId());
+            safeUser.setUsername(item.getUsername());
+            safeUser.setEmail(item.getEmail());
+            return safeUser;
+        }).toList();
+        return Result.ok(safeUsers);
+    }
+
+    @Override
+    public Result cancelStopSay(Long id) {
+        LambdaUpdateWrapper<User> updateWrapper = new LambdaUpdateWrapper<>();
+        updateWrapper.eq(User::getId,id).set(User::getState,0);
+
+        if (this.update(updateWrapper)) {
+            return Result.ok("解除成功");
+        }
+        return Result.fail("解除失败");
+    }
 }

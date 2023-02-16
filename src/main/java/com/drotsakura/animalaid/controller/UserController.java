@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
 import com.drotsakura.animalaid.common.BaseContext;
 import com.drotsakura.animalaid.common.Result;
+import com.drotsakura.animalaid.pojo.SafeUser;
 import com.drotsakura.animalaid.pojo.User;
 import com.drotsakura.animalaid.service.UserService;
 import jakarta.annotation.Resource;
@@ -42,4 +43,23 @@ public class UserController {
         return userService.getSafeUser();
     }
 
+    @PostMapping("/simpleUser")
+    public Result simpleUser(@RequestBody SafeUser safeUser){
+        return userService.getSimpleUser(safeUser);
+    }
+
+    @PostMapping("/stopSay")
+    public Result stopUserSay(Long id){
+        return userService.stopUserSay(id);
+    }
+
+    @GetMapping("/queryStopSayUser")
+    public Result queryStopUser(){
+        return userService.queryStopSayUser();
+    }
+
+    @PostMapping("/cancelStopSay")
+    public Result cancelStopSay(Long id){
+        return userService.cancelStopSay(id);
+    }
 }

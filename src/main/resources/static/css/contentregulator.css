@@ -218,7 +218,7 @@
 
 .center_feedback .list_left {
     float: left;
-    width: 100px;
+    width: 200px;
     height: 60px;
     background-color: rgba(240, 240, 240, 0.8);
 }
@@ -231,7 +231,7 @@
 
 .center_feedback .list_right {
     float: right;
-    width: 550px;
+    width: 450px;
     height: 60px;
     background-color: rgba(240, 240, 240, 0.8);
     line-height: 60px;

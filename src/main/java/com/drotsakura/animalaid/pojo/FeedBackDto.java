@@ -3,8 +3,6 @@ package com.drotsakura.animalaid.pojo;
 import lombok.Data;
 
 @Data
-public class SafeUser {
-    private Long id;
+public class FeedBackDto extends FeedBack{
     private String username;
-    private String email;
 }

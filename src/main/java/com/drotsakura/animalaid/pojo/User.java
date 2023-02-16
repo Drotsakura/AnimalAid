@@ -21,4 +21,5 @@ public class User implements Serializable {
     private Integer grade;
     private Integer type;
     private Long imageId;
+    private Integer state;
 }
