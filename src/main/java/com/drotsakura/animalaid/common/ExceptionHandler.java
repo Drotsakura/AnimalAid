@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class ExceptionHandler {
 
     @org.springframework.web.bind.annotation.ExceptionHandler(Exception.class)
-    public Result exceptionHandler(){
+    public Result exceptionHandler(Exception e){
+        e.printStackTrace();
         return Result.fail("未知错误");
+
     }
 }

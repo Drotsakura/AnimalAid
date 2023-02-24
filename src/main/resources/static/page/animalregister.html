@@ -15,6 +15,7 @@
     <script src="../js/jquery.js"></script>
     <script src="../js/animal.js"></script>
     <script src="../js/animalregister.js"></script>
+    <script src="../js/index.js"></script>
 </head>
 <body>
     <div class="head">
@@ -48,17 +49,17 @@
                             <div class="show_img">
                                 封面
                             </div>
-                            <input class="img_tip" id="chooseImage" type="file" name="file">
+                            <form action="" enctype="multipart/form-data" id="formUpload">
+                                <input class="img_tip" accept="image/*" type="file" name="file" onchange="fileUpload()" />
+                            </form>
                         </div>
 
                         <div class="cover_right">
-                            <div><input type="text" placeholder="请输入文章标题（4-10个字）"></div>
+                            <div><input id="title" type="text" placeholder="请输入文章标题（4-10个字）"></div>
                             <div class="animal_select">
                                 <span>动物种类:</span>
-                                <select name="条件选择" id="condition_select">
-                                    <option value="username">边牧</option>
-                                    <option value="eamil">波斯猫</option>
-                                    <option value="userid">白狐</option>
+                                <select name="条件选择" id="animal_type">
+
                                 </select>
                                 <span class="trait">动物特征:</span>
                             </div>
@@ -71,7 +72,7 @@
 
                     <div class="content_detail">
                         <textarea name="" id="textarea2" cols="30" rows="10"></textarea>
-                        <input type="button" value="发布">
+                        <input class="btn_issue" type="button" value="发布">
                         <input class="btn_cancel" type="button" value="取消">
                     </div>
                 </div>

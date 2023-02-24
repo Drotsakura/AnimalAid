@@ -51,9 +51,11 @@ function getDynamic(res,ul){
         const listDynamicStrs = JSON.stringify(res.data);
         const listDynamic = eval(listDynamicStrs);
 
+        console.log(res.data)
+
         for (i=0;i<listDynamic.length;i++){
             let element = document.createElement("li");
-            element.innerHTML = " <a href=\"#\" dynamicId=\""+listDynamic[i].animalId+"\">\n" +
+            element.innerHTML = " <a href=\"#\" dynamicId=\""+listDynamic[i].id+"\">\n" +
                 "                        <div class=\"content_img\"><img src=\"../../uploads/"+listDynamic[i].nativeUrl+"\" alt=\"#\"></div>\n" +
                 "                        <div class=\"content_rich\">\n" +
                 "                            <span class=\"data1\">"+listDynamic[i].title+"</span>\n" +
@@ -62,9 +64,10 @@ function getDynamic(res,ul){
                 "                        </div>\n" +
                 "                    </a>"
 
-            let animalId = listDynamic[i].animalId;
+            let dynamicId = listDynamic[i].id;
             element.addEventListener("click",function (){
-                window.localStorage.setItem('dynamicId',animalId);
+                window.localStorage.removeItem('dynamicId');
+                window.localStorage.setItem('dynamicId',dynamicId);
                 window.open('../page/dynamicdetail.html','_blank');
             })
 

@@ -7,10 +7,11 @@ window.addEventListener('load',function(){
     var userItem =JSON.parse(window.localStorage.getItem('userItem'));
 
     //名称设置
-    var usernames = this.document.querySelectorAll('.username');
+    let usernames = this.document.querySelectorAll('.username');
     for (i=0;i<usernames.length;i++){
         $( usernames[i]).html(userItem.username);
     }
+
 
 
     //UI交互
